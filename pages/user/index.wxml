@@ -1,0 +1,46 @@
+<!--pages/user/index.wxml-->
+<!-- 头像 -->
+<view class="user">
+  <view class="user-title">
+    <block wx:if="{{!token}}">
+      <view class="user-header">
+        <button size="mini" open-type="getUserInfo" bind:getuserinfo="getToken">上传头像</button>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="user-name">
+        <navigator url="/pages/login/index">登陆/注册</navigator>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 导航 -->
+<view class="nav">
+  <view class="store">
+    <view class="number">0</view>
+    <text>收藏的店铺</text>
+  </view>
+  <view class="detail">
+    <view class="number">0</view>
+    <text>收藏的商品</text>
+  </view>
+  <view class="attention">
+    <view class="number">0</view>
+    <text>关注的商品</text>
+  </view>
+  <view class="spoor">
+    <view class="number">0</view>
+    <text>我的足迹</text>
+  </view>
+</view>
+<!-- 我的订单 -->
+<view class="orderForm">
+  <block>
+    <view class="myForm">
+      <text>我的订单</text>
+    </view>
+  </block>
+  <view>
+
+  </view>
+</view>

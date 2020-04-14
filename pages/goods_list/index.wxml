@@ -1,0 +1,25 @@
+<!--pages/goods_list/index.wxml-->
+<search/>
+<!-- 列表导航 -->
+<view class="List">
+  <view class="navList">
+    <block wx:for="{{bl}}" wx:key="index">
+      <view class="bar {{index===aIndex?'click':''}}" data-index="{{index}}" bindtap="choose">{{item.name}}</view>
+    </block>
+  </view>
+  <view class="listDetail" bindtap="onPullDownRefresh">
+    <block wx:for="{{goodsList.goods}}" wx:key="cat_id">
+      <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+        <view class="content" >
+            <image src="{{item.goods_small_logo || 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3454482734,2245236824&fm=26&gp=0.jpg'}}"></image>
+            <view class="contentTitle">
+              <text>{{item.goods_name}}</text>
+              <view class="price">
+                <text>￥{{item.goods_price}}.00</text>
+              </view>
+            </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>

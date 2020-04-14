@@ -1,0 +1,39 @@
+/* pages/goods_list/index.wxss */
+.navList{
+  display: flex;
+  height: 100rpx;
+}
+.bar{
+  flex: 1;
+  line-height: 100rpx;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+}
+.target{
+  color: red;
+  border-bottom: 1rpx solid rgb(241, 45, 61)
+}
+.content{
+  display: flex;
+  height: 260rpx;
+}
+image{
+  flex: 1;
+  height: 260rpx;
+}
+.price text{
+  color: red;
+}
+.contentTitle{
+  flex: 2;
+  margin-top: 50rpx;
+}
+.price{
+  margin-top: 30rpx;
+}
+.click{
+  color: red;
+  border-bottom: 1rpx solid rgb(255, 55, 55)
+}

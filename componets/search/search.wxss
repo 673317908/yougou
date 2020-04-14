@@ -1,0 +1,16 @@
+/* componets/search/search.wxss */
+.search{
+  background-color: #ff2d4a;
+  padding: 20rpx 16rpx; 
+}
+.search-inp{
+  height: 60rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.search-text{
+  color: #ccc;
+}

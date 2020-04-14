@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "search":"/componets/search/search"
+  },
+  "navigationBarTitleText":"优购"
+}

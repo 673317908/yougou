@@ -1,0 +1,55 @@
+<!--pages/goods_detail/index.wxml-->
+<!-- 轮播图 -->
+<swiper class="detailImg" indicator-dots="true" autoplay="true" circular indicator-active-color="white">
+  <block wx:for="{{goods_detail.pics}}" wx:key="goods_id">
+    <swiper-item >
+      <image bindtap="chooseBinImg" data-src="{{item.pics_big}}" src="{{goods_detail.goods_big_logo}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 详情标题 -->
+<view class="detailTitle">
+  <view class="detailPrice">
+    <text>￥{{goods_detail.goods_price}}</text>
+  </view>
+  <view class="title">
+    <view class="tradeName">
+      <text>{{goods_detail.goods_name}}</text>
+    </view>
+    <view class="detailLike">
+    <view class="iconfont icon-shoucang" bindtap="goodLike"></view>
+      收藏
+    </view>
+  </view>
+</view>
+<view class="bor"></view>
+<!-- 图片详情 -->
+<view class="imgDeatil">
+  <view class="imgTitle">
+    <text>图文详情</text>
+  </view>
+  <view class="imgContent">
+  <rich-text nodes="{{goods_detail.goods_introduce}}"></rich-text>
+  </view>
+</view>
+<!-- 按钮 -->
+<view class="btn">
+ <view class="service">
+ <button class="serviceBtn" size="mini"></button>
+ <view class="iconfont icon-kefu"></view>
+ 客服
+</view>
+ <view class="share">
+ <view class=""></view>
+ <button class="shareBtn" size="mini"></button>
+ <view class="iconfont icon-fenxiang"></view>
+ 分享
+</view>
+ <view class="cart" bindtap="goCart">
+ <button class="cartBtn" size="mini"></button>
+ <view class="iconfont icon-cart"></view>
+ 购物车
+</view>
+<view class="joinCart" bindtap="putin">加入购物车</view>
+<view class="pay">立即支付</view>'
+</view>
